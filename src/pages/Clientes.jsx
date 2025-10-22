@@ -1,36 +1,43 @@
 import React from "react";
 import { Globe2, Star, Building2 } from "lucide-react"; // íconos decorativos
 
+// 🖼️ Importa tus imágenes locales desde src/assets/
+import logo1 from "../assets/cliente1.jpg";
+import logo2 from "../assets/cliente2.jpg";
+import logo3 from "../assets/cliente3.jpg";
+import logo4 from "../assets/cliente4.jpg";
+import logo5 from "../assets/cliente5.jpg";
+
 const clientes = [
   {
     nombre: "Solid State",
     descripcion:
       "Empresa líder en soluciones de almacenamiento digital. Socio estratégico en infraestructura tecnológica de CRYD Bank.",
-    logo: "https://images.unsplash.com/photo-1634893215363-d4c1d91d3c80?q=80&w=800&auto=format&fit=crop",
+    logo: logo1,
   },
   {
     nombre: "Noted",
     descripcion:
       "Plataforma de productividad que integra herramientas de gestión de tareas y finanzas para usuarios CRYD.",
-    logo: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop",
+    logo: logo2,
   },
   {
     nombre: "Mowi",
     descripcion:
       "Fintech especializada en pagos internacionales, aliada de CRYD Bank para conectar usuarios globalmente.",
-    logo: "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=800&auto=format&fit=crop",
+    logo: logo3,
   },
   {
     nombre: "Talo",
     descripcion:
       "Startup de microfinanzas que impulsa la inclusión financiera mediante el acceso rápido y transparente al crédito.",
-    logo: "https://images.unsplash.com/photo-1573497019411-5077b6dc7624?q=80&w=800&auto=format&fit=crop",
+    logo: logo4,
   },
   {
     nombre: "Goan",
     descripcion:
       "Empresa de seguridad digital que provee a CRYD Bank con soluciones blockchain y protección avanzada.",
-    logo: "https://images.unsplash.com/photo-1581093588401-4e27b48ff24e?q=80&w=800&auto=format&fit=crop",
+    logo: logo5,
   },
 ];
 
@@ -41,6 +48,7 @@ export default function Clientes() {
         Clientes Destacados
       </h2>
 
+      {/* Tarjetas de clientes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {clientes.map((c, i) => (
           <div

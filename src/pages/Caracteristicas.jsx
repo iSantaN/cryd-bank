@@ -1,57 +1,61 @@
 import React from "react";
-import { Cpu, ShieldCheck, Bot, Globe2, Leaf, CreditCard } from "lucide-react"; // íconos de lucide-react
+import { Cpu, ShieldCheck, Bot, Globe2, Leaf, CreditCard } from "lucide-react";
 
+// 🖼️ Importa tus imágenes locales desde src/assets
+import img1 from "../assets/caracteristica1.jpg";
+import img2 from "../assets/caracteristica2.jpg";
+import img3 from "../assets/caracteristica3.jpg";
+import img4 from "../assets/caracteristica4.jpg";
+import img5 from "../assets/caracteristica5.jpg";
+import img6 from "../assets/caracteristica6.jpg";
+
+// 🔹 Lista de características
 const caracteristicas = [
   {
     icon: <CreditCard size={40} className="text-emerald-400 mb-3" />,
     title: "Operación 100% Digital",
     description:
       "Apertura de cuentas, créditos y pagos desde nuestra app o web. Sin trámites presenciales, rápido y seguro.",
-    image:
-      "https://images.unsplash.com/photo-1605902711622-cfb43c4437e1?q=80&w=1600&auto=format&fit=crop",
+    image: img1,
   },
   {
     icon: <ShieldCheck size={40} className="text-emerald-400 mb-3" />,
     title: "Sin Comisiones Ocultas",
     description:
       "Transparencia total en cada movimiento. Conoce tus costos en tiempo real sin sorpresas.",
-    image:
-      "https://images.unsplash.com/photo-1612810806563-4b3b3f9c6d05?q=80&w=1600&auto=format&fit=crop",
+    image: img2,
   },
   {
     icon: <Bot size={40} className="text-emerald-400 mb-3" />,
     title: "Evaluación Inteligente",
     description:
       "IA analiza tu perfil para ofrecerte soluciones financieras personalizadas y accesibles.",
-    image:
-      "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1600&auto=format&fit=crop",
+    image: img3,
   },
   {
     icon: <Cpu size={40} className="text-emerald-400 mb-3" />,
     title: "Atención 24/7",
     description:
       "Chatbots y asistentes virtuales disponibles en todo momento para resolver tus dudas.",
-    image:
-      "https://images.unsplash.com/photo-1581093588401-4e27b48ff24e?q=80&w=1600&auto=format&fit=crop",
+    image: img4,
   },
   {
     icon: <Globe2 size={40} className="text-emerald-400 mb-3" />,
     title: "Integración Global",
     description:
       "Conecta con billeteras electrónicas y sistemas de pago internacionales sin fronteras.",
-    image:
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+    image: img5,
   },
   {
     icon: <Leaf size={40} className="text-emerald-400 mb-3" />,
     title: "Compromiso Sostenible",
     description:
       "Promovemos la educación financiera y el uso responsable de la tecnología para un futuro verde.",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop",
+    image: img6,
   },
 ];
 
+// 🔸 Componente principal
 export default function Caracteristicas() {
   return (
     <section className="w-full bg-gray-900 text-white py-20 px-6 md:px-12">

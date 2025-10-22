@@ -1,17 +1,18 @@
 import React from "react";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  MessageCircle,
-} from "lucide-react"; // íconos de redes sociales
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react"; // Íconos de redes sociales
+
+// 🖼️ Importa las imágenes locales desde /src/assets/
+import equipo1 from "../assets/equipo1.jpg";
+import equipo2 from "../assets/equipo2.jpg";
+import equipo3 from "../assets/equipo3.jpg";
+import equipo4 from "../assets/equipo4.jpg";
+import equipo5 from "../assets/equipo5.jpg";
 
 const equipo = [
   {
     nombre: "Yaselli Judith Ochoa Huamani",
     cargo: "CEO",
-    imagen:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop",
+    imagen: equipo1,
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
@@ -20,8 +21,7 @@ const equipo = [
   {
     nombre: "Valery Giorgina Cruz Gonzalez",
     cargo: "COO",
-    imagen:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop",
+    imagen: equipo2,
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
@@ -30,8 +30,7 @@ const equipo = [
   {
     nombre: "Claudia Vanesa Guerrero Concha",
     cargo: "CFO",
-    imagen:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+    imagen: equipo3,
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
@@ -40,8 +39,7 @@ const equipo = [
   {
     nombre: "Daniel Eduardo Mariñas Vega",
     cargo: "CIO",
-    imagen:
-      "https://images.unsplash.com/photo-1603415526960-f7e0328bce2b?q=80&w=800&auto=format&fit=crop",
+    imagen: equipo4,
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
@@ -50,8 +48,7 @@ const equipo = [
   {
     nombre: "Pedro Ricardo Ugarelli Galarza",
     cargo: "CTO",
-    imagen:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=800&auto=format&fit=crop",
+    imagen: equipo5,
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
@@ -72,50 +69,30 @@ export default function Equipo() {
             key={i}
             className="relative group bg-gray-800/60 rounded-xl overflow-hidden shadow-lg backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-emerald-500/30"
           >
-            {/* Imagen de perfil */}
+            {/* Imagen del miembro del equipo */}
             <img
               src={m.imagen}
               alt={m.nombre}
               className="w-full h-80 object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
 
-            {/* Overlay con datos */}
+            {/* Overlay con info */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 text-center transition-all duration-500">
               <h3 className="text-xl font-bold text-white">{m.nombre}</h3>
               <p className="text-emerald-400 font-medium mb-3">{m.cargo}</p>
 
               {/* Íconos de redes sociales */}
               <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <a
-                  href={m.facebook}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-emerald-400"
-                >
+                <a href={m.facebook} target="_blank" rel="noreferrer" className="hover:text-emerald-400">
                   <Facebook size={22} />
                 </a>
-                <a
-                  href={m.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-emerald-400"
-                >
+                <a href={m.instagram} target="_blank" rel="noreferrer" className="hover:text-emerald-400">
                   <Instagram size={22} />
                 </a>
-                <a
-                  href={m.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-emerald-400"
-                >
+                <a href={m.linkedin} target="_blank" rel="noreferrer" className="hover:text-emerald-400">
                   <Linkedin size={22} />
                 </a>
-                <a
-                  href={m.whatsapp}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-emerald-400"
-                >
+                <a href={m.whatsapp} target="_blank" rel="noreferrer" className="hover:text-emerald-400">
                   <MessageCircle size={22} />
                 </a>
               </div>
